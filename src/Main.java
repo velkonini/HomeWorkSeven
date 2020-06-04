@@ -1,5 +1,7 @@
-public class Main {
+import java.util.Scanner;
 
+public class Main {
+    Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
 
         Cat[] cats = new Cat[3];
@@ -10,19 +12,28 @@ public class Main {
 
         Plate plate = new Plate(100);
 
-
-        cats[2].eat(plate);
-        plate.info();
-
+        for (Cat j : cats) {
+            do {
+                for (int i = 0; i < cats.length; i++) {
+                    cats[i].eat(plate);
+                    plate.info();
+                }
+            } while (plate.food >= j.appetite && plate.food == 0);
 
 
 //        for(Cat i : cats){
 //            i.eat();
 //            plate.setFood(Plate.getFood() - .appetite);
 //            Plate.info();
-            }
-
-
         }
+
+        plate.addEat(100);
+        plate.info();
+    }
+}
+
+
+
+
 
 
