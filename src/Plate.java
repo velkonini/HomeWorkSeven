@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Plate {
 
     int food;
@@ -15,4 +17,9 @@ public class Plate {
     public void info(){
         System.out.println("plate:" + food);
     }
-}
+
+    public void addEat(int x){
+        food = food + x;
+        }
+    }
+
